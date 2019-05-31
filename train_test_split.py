@@ -11,14 +11,14 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mplimg
 from matplotlib.pyplot import imshow
 if __name__ == "__main__":
-    path = "./Earthquake/"
+    path = "/Users/ruoqi/Earthquake/"
     train_df = pd.read_csv(path + "raw.csv")
     X = train_df["time_to_failure"]
     y = train_df["acoustic_data"]
-    X_train = X.iloc[:300000000]
-    y_train = y.iloc[:300000000]
-    X_test = X.iloc[300000001:400000000]
-    y_test = y.iloc[300000001:400000000]
+    X_train = X.iloc[:3000000]
+    y_train = y.iloc[:3000000]
+    X_test = X.iloc[3000001:4000000]
+    y_test = y.iloc[3000001:4000000]
     y_ts = pd.DataFrame(data=y_test.values, columns=["acoustic_data"])
     X_ts = pd.DataFrame(data=X_test.values, columns=["time_to_failure"])
     testfile = pd.merge(X_ts, y_ts, left_index=True, right_index=True)
