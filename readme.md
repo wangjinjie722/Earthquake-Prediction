@@ -10,4 +10,4 @@
 ##### train.csv is the raw experimental earthquake data.
 ***
 ### Version : 1.0
-### Data: 06/11/2019
+### Date: 06/11/2019
